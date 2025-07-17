@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IntentionFlow</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>✨ My Daily Intention ✨</h1>
+
+    <form method="POST">
+        <input type="text" name="intention" placeholder="Write your intention..." required>
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        {% for id, text in intentions %}
+        <li>{{ text }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
